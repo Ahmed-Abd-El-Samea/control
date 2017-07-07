@@ -116,7 +116,7 @@ a:focus {
   background-color: #fff;
 }
 .navbar-custom .navbar-toggle {
-  color: white;
+  color: #333;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 12px;
 }
