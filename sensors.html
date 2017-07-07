@@ -67,6 +67,241 @@
         <!-- /.container -->
     </nav>
 
+
+    <div class="container sensors">
+        <div class="padding">
+            <div class="header text-center">
+                <h1>Sensors</h1>
+            </div>
+            <div class="sensor">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>1 - Light Follower Application <small>by Ahmed Abdelhakeem</small> </h2>
+                        <h3>Operation and working idea:</h3>
+                        <p>The toy car will follow a moving light source in the directions: forward, right, and left. And to do this mission, 3 light sensors “LDRs” are used- one for each direction as shown in fig.1 . The car will move when the light intensity is greater than normal lighting and, less than a certain value to avoid hitting the light source when it stops.</p>  
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/hakim1.png">                    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Sensor circuit: </h3>
+                        <p>Each sensor circuit consists of voltage divider circuit, where Vo is connected to an analog pin in the Arduino board. </p>
+                        <p>It is known that when an analog pin is marked as an input pin, it reads a value between 0-1023 depending on the input voltage.</p>
+                        <p>To determine the input range that moves the car, the following steps were done:</p>
+                        <ol>
+                           <li>1- Connecting a circuit as the one shown in fig.2 on a breadboard .</li> 
+                            <li>2- Measuring Vo at normal lighting, on turning on a LED flash from a       smartphone at 30 cm from the car, and on turning on a LED flash from a smartphone at 5 cm from the car.</li>
+                            <li>3- Converting the measured voltages to the arduino analog input units using the resolution 0.0049V Per unit.</li>
+                        </ol>                    
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/hakim2.png">                
+                    </div>
+                </div>
+                    <h3>The results were as follows : </h3>
+                    <ul>
+                        <li>At normal light :  Vo= 4V = 800 unit </li>
+                        <li>On turning on a flash light at 30 cm  : Vo= 2.9V = 600 units</li>
+                        <li>On turning on a flash light at 5 cm : Vo= 1.5V = 300 units</li>
+                    </ul>
+                    <br>
+                    <h3>Code logic: </h3>
+                    <p>-When the light intensity of the front sensor is between 300 -600 units move forward.</p>
+                    <p>-When the light intensity of the right sensor is between 300 -600 units move right.</p>
+                    <p>-When the light intensity of the left sensor is between 300 -600 units move left.</p>
+                    <p>-Else stop </p>
+            </div>
+
+            <hr>
+
+            <div class="sensor">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>2 - Smoke Sensor Circuit <small>by anas gamal</small> </h2>
+                        <p>-In this project, we will go over how to build a smoke sensor circuit with an arduino board.</p>
+                        <p>-The smoke sensor we will use is the MQ-2. This is a sensor that is not only sensitive to smoke, but also to flammable gas.</p>
+                        <p>-The MQ-2 smoke sensor reports smoke by the voltage level that it outputs. The more smoke there is, the greater the voltage that it outputs. Conversely, the less smoke that it is exposed to, the less voltage it outputs.</p>
+                        <p>-The MQ-2 also has a built-in potentiometer to adjust the sensitivity to smoke. By adjusting the potentiometer, you can change how sensitive it is to smoke, so it's a form of calibrating it to adjust how much voltage it will put out in relation to the smoke it is exposed to.</p>
+                        <p>-We will wire the MQ-2 to an arduino so that the arduino can read the amount of voltage output by the sensor and sound a buzzer if the sensor outputs a voltage above a certain threshold. This way, we will know that the sensor is detecting smoke and we will sound a buzzer alerting a person such as a homeowner to this fact.</p>
+                        <p>-Components Needed for Arduino Smoke Sensor Circuit</p>
+                        <p>-MQ-2 Smoke Sensor Arduino board Buzzer</p>
+                        <p>-The MQ-2 can be obtained very cheaply, just a few bucks. A good place to look for it is on ebay, which always has auctions on them for the $2-$3 range.</p>
+                        <p>-Important, it is recommended that you do not obtain the standalone sensor but the whole MQ-2 board. This is because if you buy the standalone sensor, you will have to finish building the whole schematic before you can connect it to the arduino. So that less work is required for integrating this with the arduino, it is recommended that you buy the complete MQ-2 sensor circuit. This you can see below.</p>
+                        <p>-If you buy the complete board, there are 3 leads which need to be connected.</p>
+                        <p>-MQ-2-smoke-sensor-pinout, The 3 leads are Output, Vcc, and GND, It's very basic.</p>
+                        <p>-The gas sensor needs about 5 volts of power in order to operate. This is done by connecting 5 volts to Vcc and GND.</p>
+                        <p>-The Output pin gives out the voltage reading, which is proportional to the amount of smoke that the sensor is exposed to. Again, a high voltage output means the sensor is exposed to a lot of smoke. A low or 0 voltage output means the sensor is exposed to either little or no smoke.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/anas1.png">
+                        <img class="img-responsive" src="">
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sensor">
+                <div class="row">
+                    <h2>3 - Temprature sensor alarm circuit <small>by Ahmed abdelateef mohamed</small> </h2>
+                    <div class="col-md-8">
+                        <p>-The aim of this sensor is to convert readingTo volt  then convert it to value that is similar to the temperature .</p>
+                        <p>-In the arduino code we name the value of the final reading x Where it is X = (analod read)*5*100/1023  And if  (X>40) the output will be high and the alarm will run. Alarm circuit consists of  5v buzzer and led.</p>
+                        <p>As the picture show the connection of  the lm35 temprature sensor </p>
+                        <ol>
+                            <li>Vcc (5V from the arduino)</li>
+                            <li>Analog output from the arduino (A5)</li>
+                            <li>Arduino ground</li>
+                        </ol>
+                        <p>Buzzer will be connected to the digital output 3</p>
+                        <p>the led will be connected to the digital output 4  </p>
+                        <img class="img-responsive" src="img/latif2.jpg">
+
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/latif1.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 style="padding-top: 50px">-the circuit connection will be as this connection </h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img class="img-responsive" src="img/latif3.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sensor">
+                <h2>4 - FLame sensor <small>by Ahmed Saber</small> </h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>-it's responsable to detect light or fire  and hence take an action such as :alarm</p>
+                        <p>-its connection:</p>
+                        <ol>
+                            <li>VCC...... Positive voltage input: 5v</li>
+                            <li>A0.......... Analog output</li>
+                            <li>D0......... Digital output</li>
+                            <li>GND..... Ground</li>
+                        </ol>
+                        <p>for making analog connection: we connect A0 by arduino</p>
+                        <p>action:</p>
+                        <p>when the sensor detect light or fire..the led and buzzer goes to high
+                        (led << lighting .. buzzer << make a sound)</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/saber1.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sensor">
+                <h2>5 - IR obstacle avoidance sensor <small>by brahim Fathy</small></h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Description:</h3>
+                        <p>The basic concept of an Infrared obstacle avoidance sensor is to transmit an infrared signal, this infrared signal bounces from the surface of an object and the signal is received at the infrared receiver.</p>
+                        <p>Active infrared sensors consist of two elements: infrared source and infrared detector. Infrared sources include a LED or infrared laser diode. Infrared detectors include photodiodes or phototransistors. The energy emitted by the infrared source is reflected by an object and falls on the infrared detector.</p>
+                        <h3>IR Transmitter</h3>
+                        <p>Infrared Transmitter is a light emitting diode (LED) which emits infrared radiations. Hence, they are called IR LED’s. Even though an IR LED looks like a normal LED, the radiation emitted by it is invisible to the human eye.</p>
+                        <p>The picture of a typical Infrared LED is shown</p>
+                        <h3>IR Receiver</h3>
+                        <p>nfrared receivers are also called as infrared sensors as they detect the radiation from an IR transmitter. IR receivers come in the form of photodiodes and phototransistors. Infrared Photodiodes are different from normal photo diodes as they detect only infrared radiation. The picture of a typical IR receiver or a photodiode is shown</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/2.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/3.jpg">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/4.png">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/5.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>-When the IR transmitter emits radiation, it reaches the object and some of the radiation reflects back to the IR receiver. Based on the intensity of the reception by the IR receiver, the output of the sensor is defined.</p>
+                        <p>-i.e. The infrared receiver measures the amount of infrared radiation that is reflected. If the reflected amount of light reaches above a certain threshold that means that light was reflected and so the signal pin is triggered. (goes from HIGH to LOW)</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/6.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 style="padding-top: 100px">Connection diagram</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <img class="img-responsive" src="img/7.png">
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sensor">
+                <h2>6 - Tempreture sensor for a fan <small>by Ahmed Abdel-samie</small> </h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Description of the feature</h3>
+                        <p>-The aim of this feature is to turn on a fan if the surrounding tempreture exceeds 40 degree and turn it off otherwise</p>
+                        <h3>Components used</h3>
+                        <ol>
+                            <li>And old computer fan</li>
+                            <li>Tempreture sensor</li>
+                            <li>DC Motor</li>
+                            <li>H bridge for deriving the motor</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/abdo1.jpg">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/abdo2.jpg">    
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/latif2.jpg">    
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/abdo3.jpg">    
+                    </div>
+                </div>
+                <div>
+                    <h3>Steps and Connection:</h3>
+                    <p>- Connecting the DC motor to the fan</p>
+                    <p>Using the H bridge to derive the DC motor by connecting Pin(2) of the H bridge to the output of the Arduino board</p>
+                    <p>- We'll use the motor in pnly one direction</p>
+                    <p>- Connect the motor wires to pins number 3 and 6</p>
+                    <p>- Using the code given in sensor number 3, we're calculating the tempreture using the tempreture sensor (Connected to pin A5 in the arduino board)  </p>
+                    <p>- If the tempreture calculated is more than 40 degree the output of the Arduino is high, So, the fan turns on</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="sensor">
+                <h2>7 - Sensor <small>by Ahmed Reda</small></h2>
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
     
 
     <footer>

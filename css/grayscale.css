@@ -3,12 +3,68 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+ hr{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 4px;
+    border-top: 1px solid #333;
+ }
+ .sensors .header{
+  margin-top: 40px;
+  margin-bottom: 70px;
+ }
+ .sensors .header h1{
+  font-size: 60px;
+  /*border-bottom: 2px solid #000;*/
+ }
+ .sensors p{
+  font-size: 16px;
+  margin: 0px;
+ }
+ .sensors h1, .sensors h2, .sensors h3{
+  text-transform: none;
+  margin-bottom: 10px;
+ }
+ .ind-team p{
+  margin-bottom: 5px;
+ }
+ .team img{
+    width: 200px;
+    height: 200px;
+ }
+ .team .person{
+  margin-bottom: 30px;
+ }
+ .team h3{
+  margin-bottom: 15px;
+ }
+ .team p{
+  font-size: 16px;
+  margin-bottom: 10px;
+ }
+ .fa{
+  font-size: 30px;
+ }
+ .fa-facebook-square:before{
+  color: #3B5998;
+ }
+ .fa-linkedin-square:before{
+  color: #0077B5;
+ }
+ div.padding{
+  margin-top : 100px;
+ }
+ img.team-img{
+  margin: auto;
+  margin-bottom: 20px;
+ }
 body {
   width: 100%;
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: white;
-  background-color: black;
+  color: #000;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 html {
   width: 100%;
@@ -57,7 +113,7 @@ a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: black;
+  background-color: #fff;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -75,7 +131,7 @@ a:focus {
   outline: none;
 }
 .navbar-custom a {
-  color: white;
+  color: #333;
 }
 .navbar-custom .nav li a {
   -webkit-transition: background 0.3s ease-in-out;
@@ -83,7 +139,7 @@ a:focus {
   transition: background 0.3s ease-in-out;
 }
 .navbar-custom .nav li a:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: #000;
   outline: none;
   background-color: transparent;
 }
@@ -113,7 +169,7 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: black;
+    background: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
@@ -289,6 +345,8 @@ ul.banner-social-buttons {
 }
 footer {
   padding: 0;
+  background-color: black;
+  color:white;
 }
 footer p {
   margin: 0;
