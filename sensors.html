@@ -294,9 +294,45 @@
             <hr>
 
             <div class="sensor">
-                <h2>7 - Sensor <small>by Ahmed Reda</small></h2>
+                <h2>7 - PIR Sensor <small>by Ahmed Reda</small></h2>
                 <div class="row">
-                    
+                    <div class="col-md-8">
+                        <h3>Background</h3>
+                        <p>- A PIR sensor (passive infrared sensor) is an electronic sensor that measures IR(infrared) light radiating from objects in its range(approximately 110 degrees).</p>
+                        <p>- The PIR sensor has two slots in it, When the sensor is idle, both slots detect the same amount of IR, the ambient amount radiated from the room or walls or outdoors. When a warm body like a human or animal passes by, it first intercepts one half of the PIR sensor, which causes a positive differential change between the two halves. When the warm body leaves the sensing area, the reverse happens, whereby the sensor generates a negative differential change. These change pulses are what is detected.</p>
+                        <p>- The use of a lens is to extend the field of view of the sensor.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/reda1.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Objective of PIR in our project</h3>
+                        <p>- As long as there’s no motion a red led is on, If motion is detected the car stops, alarm goes on to notify the passer-by and the red led is off.</p>
+                        <h3>Connection diagram  of PIR sensor</h3>
+                        <p>- PS: Sensor output is digital output (HIGH when motion is detected)</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/reda2.png">
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/reda3.gif">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>More information about PIR sensor</h3>
+                        <ul>
+                            <li>Sensor takes from 10 to 60 seconds to calibrate itself at the beginning.</li>
+                            <li>There are to potentiometers, one is responsible for sensitivity (more sensitive means long range==about 7 meters and low sensitivity means more accuracy for low rang==about 3 meters).</li>
+                            <li>The second potentiometer is to adjust the time delay(the time of HIGH state after detecting an object).</li>
+                            <li>The jumper is used to adjust the sensor on one of tow modes(H &L).</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="img/reda4.png">
+                    </div>
                 </div>
             </div>
         </div>
