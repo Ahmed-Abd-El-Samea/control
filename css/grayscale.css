@@ -3,6 +3,16 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+ #about p{
+  margin: 0px;
+ }
+ #about ul{
+  padding-left: 15px;
+ }
+ #about h4{
+  margin-top: 20px;
+  margin-bottom: 15px;
+ }
  hr{
     margin-top: 40px;
     margin-bottom: 40px;
